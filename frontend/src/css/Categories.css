@@ -1,0 +1,34 @@
+.categories {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.categories-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category {
+    flex: 1 1 calc(33.333% - 40px);
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.category p {
+    font-size: 1rem;
+    color: #6c757d;
+}

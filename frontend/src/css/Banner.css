@@ -1,0 +1,26 @@
+.banner {
+    position: relative;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    /* Adjust padding to fit your design */
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.banner h1 span {
+    color: #f39c12;
+    /* Optional: to highlight the word "awesome" */
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}

@@ -1,0 +1,64 @@
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.trusted-brands {
+    margin-bottom: 30px;
+}
+
+.trusted-brands h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.trusted-brands .brands {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brands img {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.link-column {
+    flex: 1 1 calc(25% - 40px);
+    text-align: left;
+}
+
+.link-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    color: #6c757d;
+}
