@@ -1,0 +1,175 @@
+/* General styling for the service page */
+.service-page {
+    padding: 30px 130px;
+}
+
+/* Breadcrumb navigation styling */
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-toggle {
+    background-color: #007bff;
+    border: none;
+}
+
+.dropdown-menu {
+    min-width: auto;
+}
+
+/* Card grid layout */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -20px -10px;
+}
+
+/* Service card styling */
+.card {
+    flex: 1 0 21%;
+    /* Ensures the card takes up approximately 21% of the container's width */
+    margin: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    width: 101%;
+    height: 190px;
+    /* border-radius: 50x; */
+}
+
+.card-title {
+    margin-top: 5px;
+    font-size: 20px;
+    /* Adjust the size as needed */
+    font-weight: bold;
+}
+
+.card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-reviews {
+    display: flex;
+    align-items: center;
+}
+
+.rating-reviews img {
+    margin-right: 5px;
+}
+
+.rating-reviews span {
+    margin-right: 5px;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.badge {
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+}
+
+.price {
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+    width: 100%;
+}
+
+.button-primary:hover {
+    background-color: #0056b3;
+}
+
+.custom-dropdown-toggle {
+    background: transparent !important;
+    border: none;
+    /* Optional: Remove border if you want */
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: inherit;
+    /* Maintain text color */
+    box-shadow: none;
+    /* Remove any box shadow */
+}
+
+.custom-dropdown-toggle:hover,
+.custom-dropdown-toggle:focus {
+    background: transparent !important;
+    color: inherit;
+    /* Maintain text color on hover */
+    border: none;
+    /* Optional: Ensure border stays removed on hover */
+    box-shadow: none;
+    /* Ensure no box shadow on hover */
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}

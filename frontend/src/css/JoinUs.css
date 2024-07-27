@@ -1,0 +1,63 @@
+.join-us-container {
+    text-align: center;
+    padding: 2.2rem;
+    margin-bottom: 100px;
+}
+
+
+.join-us-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.join-us-container p {
+    font-size: 1.2rem;
+}
+
+.join-us-options {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.option {
+    background-color: #e0f0ff;
+    border-radius: 100px;
+    padding: 2rem;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.option-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.option-content {
+    text-align: left;
+}
+
+.join-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    font-size: 0.9rem;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    /* Make the font bold */
+}
+
+.join-button:hover {
+    background-color: #0056b3;
+}

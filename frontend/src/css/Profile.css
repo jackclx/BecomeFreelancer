@@ -1,0 +1,457 @@
+.profile-page {
+    padding: 30px 130px;
+}
+
+.breadcrumb-nav {
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-nav a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.breadcrumb-nav a:hover {
+    text-decoration: underline;
+}
+
+.media-wrapper {
+    position: relative;
+}
+
+.media-button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.media-button img {
+    display: block;
+    height: 70px;
+    width: 70x;
+    /* Remove any inline spacing */
+}
+
+.left-button {
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+
+.right-button {
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+
+.large-profile-picture {
+    width: 600px;
+    height: 400px;
+}
+
+.profile-info-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.profile-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.large-profile-picture {
+    width: 600px;
+    height: 390px;
+    margin-left: -5px;
+    /* height: auto; */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.profile-info .profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.profile-info .profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.profile-info .rating {
+    font-size: 1.2em;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info .bio {
+    flex: 1;
+    font-size: 1.4em;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: orange;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: white;
+
+}
+
+.booking-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-info .book-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 300px;
+    margin-right: 40px;
+    font-size: 1.2em;
+}
+
+.profile-info .book-button:hover {
+    background-color: #0056b3;
+}
+
+.profile-info .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 22px;
+}
+
+.profile-about,
+.project,
+.profile-pricing,
+.profile-reviews {
+    margin-bottom: 50px;
+}
+
+.profile-about h2,
+.project h2,
+.profile-pricing h2,
+.profile-reviews h2 {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile-about p,
+.profile-pricing p {
+    font-size: 1.2em;
+}
+
+.project {
+    position: relative;
+}
+
+.project p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%;
+}
+
+.project .nav.nav-pills {
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgb(255 255 255 / 10%);
+    overflow: hidden;
+}
+
+.project .nav.nav-pills .nav-item {
+    width: 33.33333%;
+}
+
+.project .nav.nav-pills .nav-link {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 17px 0;
+    color: #fff;
+    width: 100%;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    z-index: 0;
+}
+
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 0%, #434343 100%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nav-link#projects-tabs-tab-first {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 55px 0px 0px 55px;
+}
+
+.nav-link#projects-tabs-tab-second {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 55px 55px 0;
+}
+
+.proj-imgbx {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+}
+
+.proj-imgbx::before {
+    content: "";
+    background: linear-gradient(90deg, #000000 0%, #434343 100%);
+    opacity: 0.85;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.proj-imgbx:hover::before {
+    height: 100%;
+}
+
+.proj-txtx {
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    width: 100%;
+    color: white;
+}
+
+.proj-imgbx:hover .proj-txtx {
+    top: 50%;
+    opacity: 1;
+}
+
+.proj-txtx h4 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.1em;
+}
+
+.proj-txtx span {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+}
+
+.profile-reviews .rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+}
+
+.profile-reviews .rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    /* Center align the text horizontally */
+}
+
+.profile-reviews .rating-value {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-reviews .rating-scale {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: -25px;
+}
+
+.profile-reviews .rating-bars {
+    flex: 1;
+}
+
+.profile-reviews .rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 6px;
+}
+
+.profile-reviews .rating-stars {
+    color: #f39c12;
+}
+
+.profile-reviews .rating-count {
+    color: #333;
+}
+
+.profile-reviews .review {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}
+
+.profile-reviews .review-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.profile-reviews .review img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.profile-reviews .review p {
+    margin: 15px 0;
+}
+
+.profile-reviews .ratingBar {
+    margin-right: 670px;
+}
+
+/* CSS for ProfileNav component */
+.navbar {
+    margin: 0;
+    /* Ensure no margin is added to the navbar */
+    width: 100%;
+    font-size: 1.1em;
+    /* position: fixed; */
+}
+
+.navbar .container {
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+
+.navbar .navbar-collapse {
+    justify-content: flex-start;
+}
+
+.navbar .navbar-nav {
+    flex-direction: row;
+    /* Ensure the links are in a row */
+}
+
+.navbar-nav-custom {
+    display: flex;
+    justify-content: flex-start;
+    /* Align links to the left */
+    width: 100%;
+    font-size: 1.5em;
+    /* Ensure the nav takes full width */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    /* Black text color */
+    font-weight: bold;
+    /* Bold text */
+    margin: 0 0.5rem;
+    /* Space between links */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #007bff;
+    /* Blue color on hover */
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: #007bff;
+    /* Blue color for active link */
+    border-bottom: 2px solid #007bff;
+    /* Blue underline for active link */
+}
+
+.navbar .navbar-nav .nav-link:focus {
+    outline: none;
+    /* Remove outline */
+}
+
+.navbar .navbar-nav .nav-link.active:hover {
+    color: #0056b3;
+    /* Darker blue color on hover for active link */
+    border-bottom: 2px solid #0056b3;
+    /* Darker blue underline on hover for active link */
+}

@@ -1,20 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Header.css';
+import logo3 from '../images/Logo3.png';
 
-function Header() {
+function Header({ onSearch }) {
+    const [input, setInput] = useState('');
+
+    const handleInputChange = (e) => {
+        setInput(e.target.value);
+    };
+
+    const handleSearchClick = () => {
+        onSearch(input);
+    };
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSearchClick();
+        }
+    };
+
     return (
         <header className="header">
             <div className="header-content">
                 <div className="logo">
-                    <img src="/logo.png" alt="GigSpace Logo" />
+                    <Link to="/">
+                        <img src={logo3} alt="GigSpace Logo" />
+                    </Link>
                 </div>
                 <div className="search-bar">
-                    <input type="text" placeholder="What kind of talent or service can we help you find?" />
-                    <button>Search</button>
+                    <input
+                        type="text"
+                        placeholder="Find Services"
+                        value={input}
+                        onChange={handleInputChange}
+                        onKeyPress={handleKeyPress}
+                    />
                 </div>
+                <nav className="navigation">
+                    <a href="/discover">Discover</a>
+                    <a href="/how-it-works">How It Works</a>
+                    <a href="/about-us">About Us</a>
+                </nav>
                 <div className="login-list-services">
-                    <button>Log In</button>
-                    <button className="list-services">List your services</button>
+                    <a href="/login"><button>Login</button></a>
+                    <button className="list-services">Join as a Freelancer</button>
                 </div>
             </div>
         </header>
