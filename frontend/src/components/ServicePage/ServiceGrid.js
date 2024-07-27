@@ -3,22 +3,22 @@ import ServiceCard from './ServiceCard';
 import SortDropdown from './SortDropdown'; // Import the SortDropdown component
 
 const servicesData = [
-    { id: 1, name: 'LUCAS WANG', rating: 4.7, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/lucas2.png" },
-    { id: 2, name: 'SOPHIE LUO', rating: 5.0, reviews: 10, price: 150, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/sophie1.png" },
-    { id: 3, name: 'LIAM ANDERSON', rating: 5.0, reviews: 43, price: 300, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer3.png" },
-    { id: 4, name: 'SOPHIA MARTINEZ', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer4.png" },
-    { id: 5, name: 'ETHAN THOMPSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer5.png" },
-    { id: 6, name: 'MASON WILSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer6.png" },
-    { id: 7, name: 'AVA TAYLOR', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer7.png" },
-    { id: 8, name: 'OLIVIA BROWN', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer8.png" },
-    { id: 9, name: 'LUCAS WANG', rating: 4.7, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer3.png" },
-    { id: 10, name: 'SOPHIE LUO', rating: 5.0, reviews: 10, price: 150, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer4.png" },
-    { id: 11, name: 'LIAM ANDERSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer3.png" },
-    { id: 12, name: 'SOPHIA MARTINEZ', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/singer4.png" },
-    { id: 13, name: 'ETHAN THOMPSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/sophie1.png" },
-    { id: 14, name: 'MASON WILSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/lucas2.png" },
-    { id: 15, name: 'AVA TAYLOR', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/sophie1.png" },
-    { id: 16, name: 'OLIVIA BROWN', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.cloud.google.com/gigspace/images/lucas2.png" },
+    { id: 1, name: 'LUCAS WANG', rating: 4.7, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/lucas2.png" },
+    { id: 2, name: 'SOPHIE LUO', rating: 5.0, reviews: 10, price: 150, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/sophie1.png" },
+    { id: 3, name: 'LIAM ANDERSON', rating: 5.0, reviews: 43, price: 300, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer3.png" },
+    { id: 4, name: 'SOPHIA MARTINEZ', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer4.png" },
+    { id: 5, name: 'ETHAN THOMPSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer5.png" },
+    { id: 6, name: 'MASON WILSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer6.png" },
+    { id: 7, name: 'AVA TAYLOR', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer7.png" },
+    { id: 8, name: 'OLIVIA BROWN', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer8.png" },
+    { id: 9, name: 'LUCAS WANG', rating: 4.7, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer3.png" },
+    { id: 10, name: 'SOPHIE LUO', rating: 5.0, reviews: 10, price: 150, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer4.png" },
+    { id: 11, name: 'LIAM ANDERSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer3.png" },
+    { id: 12, name: 'SOPHIA MARTINEZ', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/singer4.png" },
+    { id: 13, name: 'ETHAN THOMPSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/sophie1.png" },
+    { id: 14, name: 'MASON WILSON', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/lucas2.png" },
+    { id: 15, name: 'AVA TAYLOR', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/sophie1.png" },
+    { id: 16, name: 'OLIVIA BROWN', rating: 5.0, reviews: 43, price: 200, tags: ['guitarist', 'soloist', 'wedding singer'], image: "https://storage.googleapis.com/gigspace/images/lucas2.png" },
 ];
 
 const ServiceGrid = () => {
