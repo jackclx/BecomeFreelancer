@@ -34,6 +34,9 @@ app.use('/api/users', users);
 const freelancers = require('./routes/freelancers');
 app.use('/api/freelancers', freelancers);
 
+const admin = require('./routes/admin'); // Import the new admin route
+app.use('/api/admin', admin); // Use the new admin route
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

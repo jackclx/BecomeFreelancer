@@ -27,7 +27,7 @@ const FreelancerSchema = new mongoose.Schema({
   title: String,
   description: String,
   service_category: String,
-  service_subcategory: String,
+  service_subcategory: [String], // Change to array of strings
   tags: [String],
   pricing: {
     hourlyRate: Number,

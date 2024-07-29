@@ -9,7 +9,7 @@ const AboutForm = ({ onNext }) => {
     title: '',
     description: '',
     service_category: '',
-    service_subcategory: '',
+    service_subcategory: [],
     tags: []
   });
 
@@ -29,6 +29,17 @@ const AboutForm = ({ onNext }) => {
     setFormData({
       ...formData,
       [name]: value
+    });
+  };
+
+  const handleSubcategoryChange = (e) => {
+    const { value, checked } = e.target;
+    setFormData((prevState) => {
+      if (checked) {
+        return { ...prevState, service_subcategory: [...prevState.service_subcategory, value] };
+      } else {
+        return { ...prevState, service_subcategory: prevState.service_subcategory.filter((subcategory) => subcategory !== value) };
+      }
     });
   };
 
@@ -142,19 +153,20 @@ const AboutForm = ({ onNext }) => {
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="service_subcategory">Service Subcategory</label>
-        <select
-          id="service_subcategory"
-          name="service_subcategory"
-          value={formData.service_subcategory}
-          onChange={handleChange}
-          disabled={!formData.service_category}
-        >
-          <option value="">Select a subcategory</option>
-          {formData.service_category && serviceSubcategories[formData.service_category].map((subcategory) => (
-            <option key={subcategory} value={subcategory}>{subcategory}</option>
-          ))}
-        </select>
+        <label>Service Subcategory</label>
+        {formData.service_category && serviceSubcategories[formData.service_category].map((subcategory) => (
+          <div key={subcategory} className="form-group">
+            <label>
+              <input
+                type="checkbox"
+                value={subcategory}
+                checked={formData.service_subcategory.includes(subcategory)}
+                onChange={handleSubcategoryChange}
+              />
+              {subcategory}
+            </label>
+          </div>
+        ))}
       </div>
       <div className="form-group">
         <label htmlFor="tags">Tags</label>
