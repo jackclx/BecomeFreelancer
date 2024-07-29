@@ -34,3 +34,8 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+.standard {
+  padding: 0 130px;
+
+}

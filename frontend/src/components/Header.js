@@ -44,7 +44,9 @@ function Header({ onSearch }) {
                 </nav>
                 <div className="login-list-services">
                     <a href="/login"><button>Login</button></a>
-                    <button className="list-services">Join as a Freelancer</button>
+                    <a href="/BecomeFreelancer">
+                        <button className="list-services">Join as a Freelancer</button>
+                    </a>
                 </div>
             </div>
         </header>
