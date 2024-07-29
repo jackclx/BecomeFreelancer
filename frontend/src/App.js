@@ -18,7 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/Service" element={<ServicePage />} />
+          <Route path="/Service/:subcategory" element={<ServicePage />} />
           <Route path="/Profile" element={<ProfilePage />} />
           <Route path="/Login/*" element={<LoginPage />} />
           <Route path="/Login/SignUp" element={<SignUpPage />} />

@@ -2,13 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Freelancer = require('../models/Freelancer');
 
-// Get all freelancers
+// Route to get freelancers with optional subcategory filter
 router.get('/', async (req, res) => {
     try {
-        const freelancers = await Freelancer.find();
-        res.json(freelancers);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+        const { subcategory } = req.query;
+        const filter = subcategory ? { service_subcategory: new RegExp(subcategory, 'i') } : {};
+        const freelancers = await Freelancer.find(filter);
+        res.status(200).json(freelancers);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred while fetching freelancers');
     }
 });
 
