@@ -23,7 +23,7 @@ const Login2 = () => {
             localStorage.setItem('token', response.data.token);
             // Redirect based on role
             if (role === 'freelancer') {
-                navigate('/freelancer-dashboard');
+                navigate('/freelancer-create-account');
             } else if (role === 'eventplanner') {
                 navigate('/eventplanner-dashboard');
             }

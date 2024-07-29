@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import BookingPage from './pages/BookingPage';
 import BecomeFreelancerPage from './pages/BecomeFreelancerPage';
+import FreelancerCreateAccount from './pages/FreelancerCreateAccount';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Login/SignUp" element={<SignUpPage />} />
           <Route path="/Booking" element={<BookingPage />} />
           <Route path="/BecomeFreelancer" element={<BecomeFreelancerPage />} />
+          <Route path="/freelancer-create-account" element={<FreelancerCreateAccount />} />
         </Routes>
         <Footer />
       </div>

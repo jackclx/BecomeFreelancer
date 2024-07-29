@@ -31,6 +31,9 @@ app.get('/', (req, res) => {
 const users = require('./routes/users');
 app.use('/api/users', users);
 
+const freelancers = require('./routes/freelancers');
+app.use('/api/freelancers', freelancers);
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

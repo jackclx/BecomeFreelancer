@@ -13,7 +13,9 @@ const Cover = () => {
                         alongside hundreds of certified freelancers. Create success stories with countless events,
                         grow your client base, and expand your reach.
                     </p>
-                    <button className="get-started-btn">Get Started</button>
+                    <a href="../login/freelancer" className="get-started-btn">
+                        Get Started
+                    </a>
                 </div>
                 <div className="cover-image">
                     <img src={guitarPlayer} alt="Guitar Player" />
