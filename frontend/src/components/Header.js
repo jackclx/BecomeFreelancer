@@ -28,20 +28,6 @@ function Header({ onSearch }) {
                         <img src={logo3} alt="GigSpace Logo" />
                     </Link>
                 </div>
-                <div className="search-bar">
-                    <input
-                        type="text"
-                        placeholder="Find Services"
-                        value={input}
-                        onChange={handleInputChange}
-                        onKeyPress={handleKeyPress}
-                    />
-                </div>
-                <nav className="navigation">
-                    <a href="/discover">Discover</a>
-                    <a href="/how-it-works">How It Works</a>
-                    <a href="/about-us">About Us</a>
-                </nav>
                 <div className="login-list-services">
                     <a href="/login"><button>Login</button></a>
                     <a href="/BecomeFreelancer">
