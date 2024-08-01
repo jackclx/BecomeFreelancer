@@ -18,16 +18,17 @@ const subcategories = {
 function ServicePage() {
     const { subcategory } = useParams();
     const [freelancers, setFreelancers] = useState([]);
-    const [selectedSubcategory, setSelectedSubcategory] = useState('');
+    const [selectedSubcategories, setSelectedSubcategories] = useState([]);
 
     const fetchFreelancers = useCallback(async () => {
         try {
             let url = `http://localhost:8000/api/freelancers?category=${subcategory}`;
-            if (selectedSubcategory) {
-                url += `&subcategory=${selectedSubcategory}`;
+            if (selectedSubcategories.length > 0) {
+                const subcategoriesString = selectedSubcategories.join(',');
+                url += `&subcategories=${subcategoriesString}`;
             }
             console.log(url);
-            console.log(`Fetching freelancers for category: ${subcategory} and subcategory: ${selectedSubcategory}`);
+            console.log(`Fetching freelancers for category: ${subcategory} and subcategories: ${selectedSubcategories}`);
             const response = await axios.get(url);
             console.log('Request Headers:', response.config.headers);
             console.log('Response:', response.data);
@@ -35,28 +36,40 @@ function ServicePage() {
         } catch (error) {
             console.error('Error fetching freelancers:', error);
         }
-    }, [subcategory, selectedSubcategory]);
+    }, [subcategory, selectedSubcategories]);
 
     useEffect(() => {
         fetchFreelancers();
-    }, [fetchFreelancers, selectedSubcategory]);
+    }, [fetchFreelancers]);
+
+    const handleSubcategoryChange = (e) => {
+        const { value, checked } = e.target;
+        if (checked) {
+            setSelectedSubcategories([...selectedSubcategories, value]);
+        } else {
+            setSelectedSubcategories(selectedSubcategories.filter(subcat => subcat !== value));
+        }
+    };
 
     return (
         <div className="service-page">
             <BreadcrumbNav category={subcategory} />
             <SortDropdown />
             <div className="subcategory-filter">
-                <label htmlFor="subcategory">Filter by Subcategory:</label>
-                <select
-                    id="subcategory"
-                    value={selectedSubcategory}
-                    onChange={(e) => setSelectedSubcategory(e.target.value)}
-                >
-                    <option value="">All</option>
-                    {subcategories[subcategory]?.map((subcat) => (
-                        <option key={subcat} value={subcat}>{subcat}</option>
-                    ))}
-                </select>
+                <label>Filter by Subcategory:</label>
+                {subcategories[subcategory]?.map((subcat) => (
+                    <div key={subcat} className="form-group">
+                        <label>
+                            <input
+                                type="checkbox"
+                                value={subcat}
+                                checked={selectedSubcategories.includes(subcat)}
+                                onChange={handleSubcategoryChange}
+                            />
+                            {subcat}
+                        </label>
+                    </div>
+                ))}
             </div>
             <ServiceGrid freelancers={freelancers} />
         </div>
