@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ServiceCard from './ServiceCard';
 import SortDropdown from './SortDropdown'; // Import the SortDropdown component
 
 const ServiceGrid = ({ freelancers = [] }) => {
@@ -42,9 +41,19 @@ const ServiceGrid = ({ freelancers = [] }) => {
                 <div>{sortedServices.length} Results</div>
                 <SortDropdown onSortChange={handleSortChange} />
             </div>
-            <div className="card-grid">
+            <div className="list-grid">
                 {currentServices.map(service => (
-                    <ServiceCard key={service._id} service={service} />
+                    <div key={service._id} className="service-item">
+                        <h3>{service.name}</h3>
+                        <p>Email: {service.email}</p>
+                        <p>Phone: {service.phone_number}</p>
+                        <p>About: {service.about}</p>
+                        <p>Title: {service.title}</p>
+                        <p>Description: {service.description}</p>
+                        <p>Service Category: {service.service_category}</p>
+                        <p>Service Subcategories: {service.service_subcategory.join(', ')}</p>
+                        <p>Tags: {service.tags.join(', ')}</p>
+                    </div>
                 ))}
             </div>
             <div className="pagination">
