@@ -2,19 +2,30 @@ const express = require('express');
 const router = express.Router();
 const Freelancer = require('../models/Freelancer');
 
-// Route to get freelancers with optional category filter
+// Route to get freelancers with optional category and subcategory filter
 router.get('/', async (req, res) => {
     try {
-        console.log('Request Headers:', req.headers);
-        const { category } = req.query;
+        const { category, subcategory } = req.query;
         console.log(`Category filter: ${category}`);
+        console.log(`Subcategory filter: ${subcategory}`);
 
         // Convert the URL-friendly category back to the original format
         const formattedCategory = category
             ? category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
             : null;
-        
-        const filter = formattedCategory ? { service_category: formattedCategory } : {};
+
+        // Build the filter object
+        let filter = {};
+        if (formattedCategory) {
+            filter.service_category = formattedCategory;
+        }
+        if (subcategory) {
+            filter.service_subcategory = { $elemMatch: { $eq: subcategory } };
+        }
+
+        // Log the constructed filter object
+        console.log('Filter object:', filter);
+
         const freelancers = await Freelancer.find(filter);
         console.log('Found freelancers:', freelancers);
         res.status(200).json(freelancers);
@@ -23,6 +34,7 @@ router.get('/', async (req, res) => {
         res.status(500).send('An error occurred while fetching freelancers');
     }
 });
+
 
 
 
